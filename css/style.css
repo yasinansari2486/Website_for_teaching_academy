@@ -71,7 +71,7 @@ h1,h2,h3{
 }
 
 .text-red{
-    color: #ff0000;
+    color: #e63946;
 }
 
 .text-grey{
@@ -119,10 +119,10 @@ h1,h2,h3{
     /* background-color: #2e2e2e; */
 }
 
-.navbar .logo{
+.navbar img.logo{
     float: left;
-    width: 8rem;
-    height: 8rem;
+    width: 80px;
+    height: 80px;
     padding: 1%;
 }
 
@@ -232,6 +232,10 @@ h1,h2,h3{
 
 /* ############## features section styling ######### */
 
+.features{
+    padding:10rem 0;
+}
+
 .features h2{
     font-weight: 700;
 }
@@ -242,27 +246,21 @@ h1,h2,h3{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.455);
 }
 
-.box-wrap1{
+.box{
     float: left;
     width: 33.333%;
-    background-color: #2e2e2e;
-    
-    padding: 2em;
+    padding: 2rem;
 }
 
+.box-wrap1,.box-wrap3{
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
 .box-wrap2{
-    float: left;
-    width: 33.333%;
     background: linear-gradient(25deg,#d64c75,#e63946 50%);
-    padding: 2em;
+    color: #ffffff;
 }
 
-.box-wrap3{
-    float: left;
-    width: 33.333%;
-    background-color: #2e2e2e;
-    padding: 2em;
-}
 
 .box-wrap::after{
     content: "";
@@ -483,4 +481,174 @@ h1,h2,h3{
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+/* ###################### Media Queries ############################ */
+
+@media (max-width:500px){
+    html{
+        font-size: 43.75%;
+    }
+
+    .navbar img.logo{
+        float: none;
+        display: block;
+        height: 60px;
+        width: 60px;
+        margin: 0px auto;
+        padding-top: 0.5rem;
+    }
+
+    .navbar .nav-items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .row{
+        height: auto;
+        display: block;
+    }
+
+    .row .img-box,
+    .row .text-box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .features .box-wrap{
+        float: none;
+       box-shadow: none;
+     }
+    
+    .features .box{ 
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.473) ;
+    }
+
+    .features .box-wrap2,
+    .features .box-wrap3{
+        margin-top: 5rem;
+    }
+
+    .banner{
+        padding-bottom: 1rem;
+    }
+
+    .banner .banner-left,
+    .banner a.banner-right{
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .form-wrapper .class-address,
+    .form-wrapper .form{
+        float: none;
+        display: block;
+        width: 100%;
+        margin-bottom: 5rem;
+        height: 600px;
+    }
+
+}
+
+@media(min-width:501px) and (max-width:768px){
+   
+    html{
+        font-size: 50%;
+    }
+
+    p{
+        font-size:1.4rem;
+    }
+
+    .navbar img.logo{
+        float: none;
+        display: block;
+        height: 60px;
+        width: 60px;
+        margin: 0px auto;
+        padding-top: 0.5rem;
+    }
+
+    .navbar .nav-items{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .row{
+        height: auto;
+        display: block;
+    }
+
+    .row .img-box,
+    .row .text-box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .features .box-wrap{
+        float: none;
+       box-shadow: none;
+     }
+    
+    .features .box{ 
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.473) ;
+    }
+
+    .features .box-wrap2,
+    .features .box-wrap3{
+        margin-top: 5rem;
+    }
+
+    .banner{
+        padding-bottom: 1rem;
+    }
+
+    .banner .banner-left,
+    .banner a.banner-right{
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .form-wrapper .class-address,
+    .form-wrapper .form{
+        float: none;
+        display: block;
+        width: 100%;
+        margin-bottom: 5rem;
+        height: 620px;
+    }
+
+    
+}
+
+@media (min-width:769px) and (max-width:1200px){
+    html{
+        font-size: 56.25%;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+@media(orientation:landscape) and (max-height:500px){
+    .header{
+        height: 90vmax;
+    }
 }
